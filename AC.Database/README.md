@@ -22,10 +22,10 @@ How to deploy scripts without SSDT
 Using the included `deploy-sql.ps1` script
 
 - The repository includes a helper `deploy-sql.ps1` that runs all `.sql` files via `sqlcmd`. Usage:
-   - Run in PowerShell:
-      - `./deploy-sql.ps1 -Server '.' -Database 'ACDatabase'` (Windows integrated auth)
-      - `./deploy-sql.ps1 -Server 'localhost' -Database 'ACDatabase' -User 'sa' -Password 'Password1!'` (SQL auth)
-   - `sqlcmd` must be installed and available in PATH.
+  - Run in PowerShell:
+    - `./deploy-sql.ps1 -Server '.' -Database 'ACDatabase'` (Windows integrated auth)
+    - `./deploy-sql.ps1 -Server 'localhost' -Database 'ACDatabase' -User 'sa' -Password 'Password1!'` (SQL auth)
+  - `sqlcmd` must be installed and available in PATH.
 
 CI considerations
 

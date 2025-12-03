@@ -59,7 +59,7 @@ Purpose: Help AI agents be immediately productive in this repository by describi
   - Example: `& .\AC.Desktop.Main\bin\Debug\AC.Desktop.Main.exe`
 - Run console app for quick DB interactions: `& .\ACConsoleApp\bin\Debug\AC.ConsoleApp.exe`
 - Database: Use Visual Studio SQL Server Database Project (`AC.Database/`) to deploy/publish schema to local SQL Server instance; the default connection string is in `AC.DAL/App.config` and points to `ACDatabase`, data source `.`.
-  - Note: The `AC.Database` SQL project is currently *excluded* from the default solution to avoid unsupported project types for developers without SSDT. The project files remain in `AC.Database/`. To use it, re-add `AC.Database\AC.Database.sqlproj` to the solution and install SSDT.
+  - Note: The `AC.Database` SQL project is currently _excluded_ from the default solution to avoid unsupported project types for developers without SSDT. The project files remain in `AC.Database/`. To use it, re-add `AC.Database\AC.Database.sqlproj` to the solution and install SSDT.
 
 ## Common tasks and where to change things
 

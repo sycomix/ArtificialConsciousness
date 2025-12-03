@@ -168,6 +168,7 @@ Repository housekeeping & safety (recommendations)
 
 - Issue: `AC.Database` is a SQL Server Database Project (`.sqlproj`). Developers without SSDT will see "Unsupported" when opening it.
 - Recommendation:
+
   - Add local setup instructions (SSDT installation) in `DEVELOPER-SETUP.md` (done).
   - For devs who don't need to work on the DB project: unload `AC.Database` or remove it from the solution for local development.
   - Update CI to skip building `AC.Database` (implemented) or provide a specific runner with SSDT to CI if DB project builds are required.

@@ -6,7 +6,7 @@
              xmlns:extended="clr-namespace:AC.Desktop.Controls.Extensions"
              xmlns:helpers="clr-namespace:AC.Desktop.Controls.Helpers"
              xmlns:resx="clr-namespace:AC.Desktop.Controls.Resources"
-             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:vm="clr-namespace:AC.Desktop.Controls.SideBar"
              xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              mc:Ignorable="d" 

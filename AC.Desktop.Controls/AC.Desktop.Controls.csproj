@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="ControlzEx" Version="5.0.0" />
     <PackageReference Include="MahApps.Metro" Version="2.4.11" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AC.BLL.Models\AC.BLL.Models.csproj" />
@@ -16,5 +17,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Styles.xaml" />
   </ItemGroup>
 </Project>

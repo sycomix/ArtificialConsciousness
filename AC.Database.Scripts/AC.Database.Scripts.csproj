@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>AC.Database.Scripts</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\AC.Database\**\*.sql" />
+  </ItemGroup>
+</Project>

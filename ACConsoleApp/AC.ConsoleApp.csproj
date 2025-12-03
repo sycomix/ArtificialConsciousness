@@ -2,6 +2,11 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <OutputType>Exe</OutputType>
+    <AssemblyTitle>AC.ConsoleApp</AssemblyTitle>
+    <Product>AC.ConsoleApp</Product>
+    <Copyright>Copyright ©  2018</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.5.1" />

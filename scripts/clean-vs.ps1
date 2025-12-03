@@ -13,7 +13,8 @@ Write-Host "Cleaning .vs and UpgradeLog files in: $SolutionPath"
 if (Test-Path -Path '.vs') {
     Remove-Item -Path '.vs' -Recurse -Force -ErrorAction SilentlyContinue
     Write-Host "Removed .vs folder"
-} else {
+}
+else {
     Write-Host "No .vs folder found"
 }
 

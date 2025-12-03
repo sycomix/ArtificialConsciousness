@@ -4,10 +4,7 @@
     <OutputType>Library</OutputType>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <PackageReference Include="AutoMapper" Version="8.0.0" />
-    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\ConstDictionary.Designer.cs">

@@ -25,7 +25,7 @@ namespace AC.Desktop.Controls.SideBar
     {
         public SideBarView()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

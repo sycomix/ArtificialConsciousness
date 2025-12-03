@@ -7,7 +7,7 @@
              xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
              xmlns:localRes ="clr-namespace:AC.Desktop.Main.Resources.Local"
              xmlns:res="AC.Desktop.Controls"         
-             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              xmlns:vm="clr-namespace:AC.Desktop.Main.ViewModels.Connections"
              mc:Ignorable="d" 

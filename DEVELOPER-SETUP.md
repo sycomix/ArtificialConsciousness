@@ -19,6 +19,7 @@ If Visual Studio says "Unsupported" or has a missing project type:
 - Options:
   1. Install SSDT as described above, then re-open the solution.
   2. If you don't need to work on the DB project, you can leave it excluded from the solution (recommended). If you had previously added it, unload it from Solution Explorer: Right-click -> Unload Project.
+  3. Clear Visual Studio caches and reload the solution if Visual Studio still shows the migration errors (close VS, delete `.vs` folder in the solution root, delete `*.suo` if present, then reopen VS and the solution).
   3. If you want the database project available in the solution for work, re-add `AC.Database\AC.Database.sqlproj` via Right click -> Add -> Existing Project. Only do this if you have SSDT installed.
 
 CI / Headless builds (GitHub Actions or build servers)

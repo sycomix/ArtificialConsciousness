@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.Serialization.Formatters.Binary;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,21 +61,12 @@ namespace AC.Common.Extentions.ObjectHashers
         /// <exception cref="SerializationException">Is thrown if something went wrong during serialization.</exception>
         private byte[] ObjectToByteArray(object objectToSerialize)
         {
-            BinaryFormatter formatter = new BinaryFormatter();
+            // TODO: Replaced BinaryFormatter with System.Text.Json serialization. This will only work for types supported by System.Text.Json and will not preserve the exact format as BinaryFormatter. If you deserialize, you must use System.Text.Json as well.
             byte[] result = null;
-
-            using (MemoryStream fs = new MemoryStream())
+            lock (_locker)
             {
-                //Here's the core functionality! One Line!
-                //To be thread-safe we lock the object
-                lock (_locker)
-                {
-                    formatter.Serialize(fs, objectToSerialize);
-                }
-
-                result = fs.ToArray();
+                result = JsonSerializer.SerializeToUtf8Bytes(objectToSerialize, objectToSerialize.GetType());
             }
-
             return result;
         }
 

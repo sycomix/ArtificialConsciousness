@@ -8,7 +8,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="8.0.0" />
-    <PackageReference Include="ControlzEx" Version="6.0.0" />
+    <PackageReference Include="ControlzEx" Version="5.0.2" />
     <PackageReference Include="EntityFramework" Version="6.5.1" />
     <PackageReference Include="MahApps.Metro" Version="2.4.11" />
     <PackageReference Include="MahApps.Metro.Resources" Version="0.6.1" />

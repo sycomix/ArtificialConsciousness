@@ -20,6 +20,7 @@ Database:
 - Default EF connection string name: `ACDatabaseEntities` in `AC.DAL/App.config`.
 - The `AC.Database` SQL project contains schema and table creation scripts. Use Visual Studio database tools to deploy to a local SQL Server (default connection uses data source `.` and `ACDatabase`).
   - Note: `AC.Database` is intentionally excluded from the main solution by default to avoid an "Unsupported project type" message in Visual Studio if SQL Server Data Tools (SSDT) isn't installed. See `DEVELOPER-SETUP.md` to learn how to re-add it if you need it.
+    - A scripts-only project is available at `AC.Database.Scripts` to allow browsing SQL files in Visual Studio even when SSDT is not installed.
 
 Tips if Visual Studio reports "Unsupported" or cannot open `AC.Database`:
 

@@ -29,5 +29,9 @@ Tips if Visual Studio reports "Unsupported" or cannot open `AC.Database`:
   2. Alternatively, download SSDT from Microsoft: https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt
   3. Restart Visual Studio and reopen the solution.
 - If you do not need to edit or open the DB project, you can unload it from Solution Explorer (right-click -> Unload Project) or temporarily delete or exclude it from the solution file. For CI builds that do not rely on the database project, use the repository's CI which already skips `AC.Database` by default.
+- If you removed `AC.Database` from the solution but Visual Studio still shows migration or unsupported notifications:
+  - Close Visual Studio.
+  - Delete the `.vs` folder in the solution root (hidden folder) and any local `*.suo` file in the solution root if present.
+  - Reopen Visual Studio and the solution. The migration popup should no longer appear.
 
 Copyright © 2019 Polymindware.

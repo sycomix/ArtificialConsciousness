@@ -7,13 +7,8 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PresentationBuildTasks" />
-    <Reference Include="System.Windows" />
-    <Reference Include="System.Windows.Presentation" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <PackageReference Include="ControlzEx" Version="3.0.2.4" />
-    <PackageReference Include="MahApps.Metro" Version="1.6.5" />
+    <PackageReference Include="ControlzEx" Version="6.0.0" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.11" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AC.BLL.Models\AC.BLL.Models.csproj" />

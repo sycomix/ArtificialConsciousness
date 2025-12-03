@@ -14,7 +14,7 @@ namespace AC.DAL.Repositories.Interfaces
         void AddRange(IEnumerable<TEntity> entities);
         void RemoveRange(IEnumerable<TEntity> entities);
         void Edit(TEntity entity);
-        void Delete(int entity);
+        Task DeleteAsync(int entity);
         void Attach(TEntity entity);
 
         Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> filter = null);

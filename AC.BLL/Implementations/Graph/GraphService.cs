@@ -45,7 +45,7 @@ namespace AC.BLL.Implementations.Graph
                     else
                     {
                         EnsureTransaction();
-                        _graphRepository.Delete(id);
+                        await _graphRepository.DeleteAsync(id);
                         await SaveChangesAsync();
 
                         blResult.Success();

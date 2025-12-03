@@ -41,7 +41,7 @@ namespace AC.BLL.Implementations.Node
                     else
                     {
                         EnsureTransaction();
-                        _nodeRepository.Delete(id);
+                        await _nodeRepository.DeleteAsync(id);
                         await SaveChangesAsync();
 
                         blResult.Success();

@@ -34,7 +34,7 @@ namespace AC.BLL.Implementations.Connection
                 if (entity != null)
                 {
                     EnsureTransaction();
-                    _connectionRepository.Delete(id);
+                    await _connectionRepository.DeleteAsync(id);
                     await SaveChangesAsync();
 
                     blResult.Success();

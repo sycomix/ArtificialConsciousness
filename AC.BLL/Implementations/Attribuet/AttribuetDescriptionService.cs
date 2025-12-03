@@ -33,7 +33,7 @@ namespace AC.BLL.Implementations.Attribuet
                 {
 
                     EnsureTransaction();
-                    _attribuetDescriptionRepository.Delete(id);
+                    await _attribuetDescriptionRepository.DeleteAsync(id);
                     await SaveChangesAsync();
 
                     blResult.Success();

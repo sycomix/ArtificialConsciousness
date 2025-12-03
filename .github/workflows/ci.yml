@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1
+
+    - name: Restore NuGet packages
+      run: nuget restore "ArtificialConsciousness.sln"
+
+    - name: Build all .csproj projects (skip database project)
+      shell: pwsh
+      run: |
+        $ErrorActionPreference = 'Stop'
+        $projects = Get-ChildItem -Path $PWD -Filter *.csproj -Recurse | Where-Object { $_.FullName -notmatch 'AC.Database' }
+        foreach ($proj in $projects) {
+          Write-Host "Building: $($proj.FullName)"
+          msbuild $proj.FullName /p:Configuration=Debug /m
+        }
+
+    - name: Run tests
+      run: |
+        $ErrorActionPreference = 'Stop'
+        $vsTest = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\TestPlatform\vstest.console.exe"
+        if (Test-Path $vsTest) {
+          & $vsTest "./**/bin/Debug/*Tests.dll" /Platform:x86 /Framework:Framework45
+        } else {
+          Write-Host "vstest not found on runner; trying dotnet test (for SDK-style)"
+          dotnet test --configuration Debug
+        }

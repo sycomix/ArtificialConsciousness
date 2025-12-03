@@ -30,7 +30,7 @@ namespace AC.DAL.Repositories.Implementations
 
         public virtual void AddRange(IEnumerable<TEntity> entities)
         {
-            if (entities is null || entities.Any(e=> e is null))
+            if (entities is null || entities.Any(e => e is null))
             {
                 throw new ArgumentException(nameof(entities));
             }
@@ -60,10 +60,10 @@ namespace AC.DAL.Repositories.Implementations
                                       _dbContext.Set<TEntity>().CountAsync(predicate);
         }
 
-        public virtual async void Delete(int id)
+        public virtual async Task DeleteAsync(int id)
         {
             var result = await _dbContext.Set<TEntity>().FindAsync(id);
-            if(result != null)
+            if (result != null)
             {
                 DeleteSync(result);
             }
@@ -71,7 +71,7 @@ namespace AC.DAL.Repositories.Implementations
 
         protected virtual void DeleteSync(TEntity entity)
         {
-             _dbContext.Set<TEntity>().Remove(entity);
+            _dbContext.Set<TEntity>().Remove(entity);
         }
 
         public void Edit(TEntity entity)
@@ -92,8 +92,8 @@ namespace AC.DAL.Repositories.Implementations
 
         public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> filter = null)
         {
-            return filter is null ? await  _dbContext.Set<TEntity>().ToListAsync() :
-                                    await _dbContext.Set<TEntity>().Where(filter).ToListAsync()  ;
+            return filter is null ? await _dbContext.Set<TEntity>().ToListAsync() :
+                                    await _dbContext.Set<TEntity>().Where(filter).ToListAsync();
         }
 
         public async Task<TEntity> GetByIdAsync(int id)
